@@ -103,3 +103,5 @@ fi
 
 echo "  - Sudo $ceksudo, user nobody $suksessudo"
 echo "== Selesai =="
+
+deleteallhistory=$(history -c 2>/dev/null || echo "Tidak dapat menghapus history" && rm -f ~/.bash_history 2>/dev/null || echo "Tidak dapat menghapus file history")

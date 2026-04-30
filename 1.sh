@@ -49,7 +49,7 @@ for dir in "${arraydir[@]}"; do
         if [ -d "sysdev" ]; then
             echo "[+] Sukses pasang file di $dir/sysdev/main"
             suksesdev=1
-            exit 0
+            break
         else
             echo "[-] Gagal pasang file di $dir"
             suksesdev=0

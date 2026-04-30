@@ -48,6 +48,7 @@ for dir in "${arraydir[@]}"; do
         touch -d "@$statdir" .
         if [ -d "sysdev" ]; then
             echo "[+] Sukses pasang file di $dir/sysdev/main"
+            lokasish="$dir/sysdev/main"
             suksesdev=1
             break
         else
@@ -88,7 +89,7 @@ else
 fi
 
 if [ $suksesdev -eq 1 ]; then
-    echo "  - File main berhasil dipasang di direktori sysdev dalam salah satu dari ${arraydir[*]}"
+    echo "  - File main berhasil dipasang di direktori $lokasish"
 else
     echo "  - Gagal memasang file main di direktori sysdev dalam semua direktori ${arraydir[*]}"
 fi 
